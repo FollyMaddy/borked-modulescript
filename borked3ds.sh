@@ -62,6 +62,13 @@ function sources_borked3ds() {
 #gitPullOrClone "$md_build" https://github.com/rtiangha/Borked3DS.git fix-gcc12
 #gitPullOrClone "$md_build" https://github.com/gvx64/Borked3DS-rpi.git
 
+	if isPlatform "aarch64"; then
+		gitPullOrClone "$md_build" https://github.com/gvx64/Borked3DS-rpi.git
+	else
+		gitPullOrClone "$md_build" https://github.com/rtiangha/Borked3DS.git
+	fi
+	
+	#do this after cloning Borked3ds, otherwise the $md_build will already exist and cloning will fail
 	#Borked3DS requires a cmake 3.5 as minimum, we will use the 4.0.2 binary when using Bookworm or lower
 	#find the files on "https://cmake.org/files/v4.0/" (cmake-4.0.2.tar.gz is source only)
 	if compareVersions $__gcc_version lt 14; then
@@ -71,12 +78,6 @@ function sources_borked3ds() {
 			downloadAndExtract https://cmake.org/files/v4.0/cmake-4.0.2-linux-x86_64.tar.gz "$md_build"
 		fi
 		mv cmake-4.0.2* cmake-4.0.2
-	fi
-	
-	if isPlatform "aarch64"; then
-		gitPullOrClone "$md_build" https://github.com/gvx64/Borked3DS-rpi.git
-	else
-		gitPullOrClone "$md_build" https://github.com/rtiangha/Borked3DS.git
 	fi
 }
  
