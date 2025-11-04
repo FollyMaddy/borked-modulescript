@@ -10,7 +10,8 @@
 # See the LICENSE file distributed with this source and at
 # https://raw.githubusercontent.com/Exarkuniv/RetroPie-Extra/master/LICENSE
 #
- 
+
+#Version 0.1
 rp_module_id="borked3ds"
 rp_module_desc="3DS Emulator borked3ds"
 rp_module_help="ROM Extension: .3ds .3dsx .elf .axf .cci .cxi .app\n\nCopy your 3DS roms to $romdir/3ds"
