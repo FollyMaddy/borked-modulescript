@@ -7,14 +7,19 @@ wget --backups=1 https://raw.githubusercontent.com/FollyMaddy/borked-modulescrip
 
 - x86_64 with debian Trixie : OK (fresh OS)
 
-- rpi5 (aarch64) with debian Bookworm : seems OK
+- rpi5 (aarch64) with debian Bookworm : seems OK (no fresh OS)
 
 - rpi5 (aarch64) with debian Trixie : Fails (fresh OS)
 
 [Version 0.2](https://github.com/FollyMaddy/borked-modulescript/blob/164b7deb51c4e16369ba43c0d672cacb52f9ef14/borked3ds.sh) tests :
 
-- x86_64 with debian Trixie : ?
+- x86_64 with debian Trixie : seems OK (no fresh OS) (rtiangha branch)
 
-- rpi5 (aarch64) with debian Bookworm : seems OK
+- rpi5 (aarch64) with debian Bookworm : seems OK (no fresh OS)
 
-- rpi5 (aarch64) with debian Trixie : seems OK
+- rpi5 (aarch64) with debian Trixie : seems OK (no fresh OS)
+
+
+Can work (tested with Version 0.2 and adaptations):
+
+- x86_64 with debian Trixie : seems OK (no fresh OS) (gvx64 branch can work if robin-map-dev is added as dependancy)
