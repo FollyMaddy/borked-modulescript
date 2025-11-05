@@ -20,6 +20,6 @@ wget --backups=1 https://raw.githubusercontent.com/FollyMaddy/borked-modulescrip
 - rpi5 (aarch64) with debian Trixie : seems OK (no fresh OS)
 
 
-Can work (tested with Version 0.2 and adaptations):
+Testing gvx64 branch on Version 0.2 and adaptations to the script, adding robin-map-dev as dependancy :
 
-- x86_64 with debian Trixie : seems OK (no fresh OS) (gvx64 branch can work if robin-map-dev is added as dependancy)
+- x86_64 with debian Trixie : compiles but doesn't work (no fresh OS)
