@@ -86,7 +86,7 @@ function sources_borked3ds() {
  
 function build_borked3ds() {
 	local extra_build_options
-	pushd $md_build/externals/sdl2/SDL && git pull origin release-2.32.x && popd
+	#pushd $md_build/externals/sdl2/SDL && git pull origin release-2.32.x && popd
  	isPlatform "aarch64" && extra_build_options="-DDYNARMIC_USE_BUNDLED_EXTERNALS=OFF"
 	mkdir build
 	cd build
